@@ -36,6 +36,10 @@
 
 # validations
 
-- investor => important
-    - username, presence, uniqueness
-    -
+- investor
+    - username
+    - name
+    - email
+    - email confirmation
+    - password
+    - funds
