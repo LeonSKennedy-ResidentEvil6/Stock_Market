@@ -1,6 +1,17 @@
 Rails.application.routes.draw do
+
+  root 'sessions#welcome'
+
+  get 'signup', to: 'investor#new'
+  post 'signup', to: 'investor#create'
+  
+  get '/signin', to: 'sessions#new'
+  post '/signin', to: 'sessions#create'
+  post '/signout', to: 'sessions#destroy'
+  
+
   resources :sectors
   resources :stocks
   resources :investors
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
 end
