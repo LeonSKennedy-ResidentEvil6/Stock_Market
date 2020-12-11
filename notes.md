@@ -43,3 +43,13 @@
     - email confirmation
     - password
     - funds
+
+# third-party validation 
+
+- OmniAuth
+    - gem file
+    - .env
+    - route
+    - initializers/omniauth.rb
+    - link in view
+    - controller

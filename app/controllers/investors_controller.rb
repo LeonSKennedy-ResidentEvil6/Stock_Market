@@ -14,7 +14,9 @@ class InvestorsController < ApplicationController
         end 
     end 
 
-    def show 
+    def show
+        @investor = Investor.find_by(id: session[:investor_id])
+        redirect_to '/' if !@investor
     end 
 
 end

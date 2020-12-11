@@ -1,0 +1,9 @@
+<h1>Welcome, <%= @investor.name %>.</h1>
+
+    <label mame='funds'>Funds available: </label>
+    <%= @investor.funds %><br>
+
+    <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'delete'}) do %>
+        <%= submit_tag "Logout" %>
+
+    <% end %>
