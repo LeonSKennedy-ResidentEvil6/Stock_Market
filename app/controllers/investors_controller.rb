@@ -10,7 +10,7 @@ class InvestorsController < ApplicationController
             session[:investor_id] = @investor.id
             redirec_to investor_path(@investor)
         else 
-            render :new
+            render 'investors/new'
         end 
     end 
 

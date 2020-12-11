@@ -9,7 +9,13 @@ class SessionsController < ApplicationController
     end 
 
     def create
-        
+        @investor = Investor.find_by(username: user_params[:username])
+       if @investor && @investor.authenticate(user_params[:password])
+        session[:investor_id] = @investor.id
+        redirect_to investor_path(@investor)
+       else 
+        render :new
+       end 
     end 
 
     # for onmiauth
