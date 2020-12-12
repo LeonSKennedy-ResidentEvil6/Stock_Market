@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
     end 
 
     def investor_params
-        params.require(:investor).permit(:username, :email, :password)
+        params.require(:investor).permit(:name, :username, :email, :password, :funds)
     end 
 
     def authentication_required

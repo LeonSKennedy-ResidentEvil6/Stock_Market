@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
     def welcome
-        @investor = current_user
+        @investor = current_investor
     end 
 
     def new
@@ -9,7 +9,7 @@ class SessionsController < ApplicationController
     end 
 
     def create
-        @investor = Investor.find_by(username: user_params[:username])
+        @investor = Investor.find_by(email: investor_params[:email])
        if @investor && @investor.authenticate(user_params[:password])
         session[:investor_id] = @investor.id
         redirect_to investor_path(@investor)

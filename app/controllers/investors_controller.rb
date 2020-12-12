@@ -5,10 +5,10 @@ class InvestorsController < ApplicationController
     end 
 
     def create
-        @investor = Investor.new(user_params)
+        @investor = Investor.new(investor_params)
         if @investor.save
             session[:investor_id] = @investor.id
-            redirec_to investor_path(@investor)
+            redirect_to investor_path(@investor)
         else 
             render 'investors/new'
         end 

@@ -6,12 +6,12 @@ Rails.application.routes.draw do
   resources :stocks
   resources :investors
 
-  get 'signup', to: 'investor#new'
+  get 'signup', to: 'investors#new'
   # post 'signup', to: 'investor#create'
   get '/login', to: 'sessions#new'
   # post '/login', to: 'sessions#create'
   post '/sessions', to: 'sessions#create'
-  # get '/logout', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy'
   post '/logout', to: 'sessions#destroy'
   
 

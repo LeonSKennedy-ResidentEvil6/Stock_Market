@@ -1,12 +1,15 @@
 <section class="stockmarketapp">
     <header class="header">
         <h1>Login</h1>
-        <%= form_tag(session_path) do %>
-            <%= text_field_tag :username %>
-            <%= text_field_tag :email %>
-            <%= text_field_tag :password %>
-            <%= submit_tag %>
-        <%= end %>
+        <%= form_tag(sessions_path) do %>
+            <h2>Username: <%= text_field_tag :username %></h2>
+            <br><br>
+            <h2>Email: <%= text_field_tag :email %></h2>
+            <br><br>
+            <h2>Password: <%= password_field_tag :password %></h2>
+            <br><br>
+            <%= submit_tag "Sign in"%>
+        <% end %>
     </header>
 
     <footer class="footer">
