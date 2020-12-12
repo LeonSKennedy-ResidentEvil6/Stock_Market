@@ -11,5 +11,15 @@ class ApplicationController < ActionController::Base
         params.require(:investor).permit(:username, :email, :password)
     end 
 
+    def authentication_required
+        if !logged_in?
+            redirect_to login_path
+        end 
+    end 
+
+    def logged_in?
+        !!current_investor
+    end 
+
 
 end

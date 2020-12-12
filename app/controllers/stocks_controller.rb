@@ -1,16 +1,16 @@
 class StocksController < ApplicationController
-
+    before_action :authentication_required
+    
     def index 
-        @stock = Stock.new
         @stocks = Stock.all
     end 
 
-    def show
-        @stock = Stock.find(params[:id])
-        
+    def new
+        @stock = Stock.new
     end 
 
     def create
+        @stock = Stock.create(params[:id]) 
     end 
 
     

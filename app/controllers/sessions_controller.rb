@@ -30,7 +30,7 @@ class SessionsController < ApplicationController
 
     def destroy
         session.delete :investor_id
-        redirect_to '/'
+        redirect_to login_path
     end 
 
 end

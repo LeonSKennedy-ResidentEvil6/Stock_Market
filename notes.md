@@ -44,6 +44,16 @@
     - password
     - funds
 
+# scope methods
+
+- active record query methods
+    - where
+    - order
+    - find
+    - all
+- scope: method_name, -> { activerecord_method(column: 'value') }
+- def self.method_name 
+
 # third-party validation 
 
 - OmniAuth
